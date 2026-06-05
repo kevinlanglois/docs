@@ -33,4 +33,4 @@ Install our Github App to auto propagate changes from your repo to your deployme
 
 ### Support
 
-For questions or help, reach our customer support team at support@nmbr.co.
+For questions or help, reach our customer support team at help@nmbr.co.
