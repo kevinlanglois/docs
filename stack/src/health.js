@@ -13,4 +13,17 @@ async function checkDatabase() {
   return rows[0].ok === 1;
 }
 
-module.exports = { checkDatabase };
+async function pingCache() {
+  const client = createClient({
+    url: process.env.REDIS_URL || "redis://cache:6379",
+  });
+  await client.connect();
+  try {
+    const reply = await client.ping();
+    return reply === "PONG";
+  } finally {
+    await client.quit();
+  }
+}
+
+module.exports = { checkDatabase, pingCache };
