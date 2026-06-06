@@ -1,4 +1,0 @@
-services:
-  test:
-    build: .
-    command: npm test
